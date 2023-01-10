@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SQL/SQL.md",
+                "file": "Python.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SQL/SQL.md",
+                "file": "Python.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SQL/SQL.md",
+                "file": "Python.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SQL/SQL.md"
+                "file": "Python.md"
               }
             }
           }
@@ -150,8 +150,8 @@
   },
   "active": "83fea52a5ac10d9a",
   "lastOpenFiles": [
-    "C++/C++.md",
     "SQL/SQL.md",
+    "C++/C++.md",
     "Latex.md",
     "MATLAB.md",
     "Python.md",

@@ -1,6 +1,7 @@
 # Python Learning
 
 ## 字符串
+kkki福建按
 制表符：\t;
 换行符：\n;
 字符串连接："+"
