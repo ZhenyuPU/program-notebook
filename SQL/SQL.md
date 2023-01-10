@@ -71,9 +71,7 @@ select name frome employees where empno in (1,2);
 ```
 ### between:
 `select 字符名 from 表名 where 字段 between 值1 and 值2;`
-order by排序
-默认升序(asc)进行排序，也可以指定desc按降序排列
-`select 字符名 from 表名 order by 字段1,字段2,... asc/desc`
+
 ## null
 代表未知遗漏的数据，作用是未知的或不适用的值的占位符。
 如果表中某个列可选，那么可以在不向该列添加值的情况下插入新纪录或更新已有的记录，该字段将以null值保存
@@ -316,6 +314,10 @@ Exemple : `EXTRACT(YEAR FROM unTimeZone)`
 
 ## ORDER BY
 
+order by排序
+默认升序(asc)进行排序，也可以指定desc按降序排列
+`select 字符名 from 表名 order by 字段1,字段2,... asc/desc`
+
 Le critère d’ordonnancement est constitué d’une liste de colonnes de la liste d’information du SELECT, avec leur mécanisme d’ordonnancement.
 
 Les mécanisme d’ordonnancement sont :
@@ -551,7 +553,6 @@ FOREIGN KEY (id, Annee) REFERENCES Inscription
 `DROP TABLE table`
 Attention aux clés étrangères encore valide
 
-
 ### Modifier une table
 
 `ALTER TABLE table`
@@ -641,6 +642,7 @@ INSERT INTO Personne(’DUPOND’);
 //包括Personne_ID=1; Personne_Nom=DUPOND
 
 ```
+
 
 
 ## view视图
