@@ -1,0 +1,11 @@
+{
+  "newFileLocation": "current",
+  "useMarkdownLinks": true,
+  "attachmentFolderPath": "./",
+  "showFrontmatter": true,
+  "spellcheckLanguages": [
+    "zh-CN",
+    "en-US",
+    "fr-FR"
+  ]
+}
