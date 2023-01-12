@@ -401,9 +401,32 @@ endl 最后一个字符是字母“l”，而非阿拉伯数字“1”，它是�
 第 8 行代码将输入的整型数据输出。从该语句中我们可以看出 cout 能够连续地输出。同样 cin 也是支持对多个变量连续输入的，如下所示。
 
 【例2】cin 连续输入示例：
+```c++
+#include<iostream>
+using namespace std;
+int main(){
+    int x;
+    float y;
+    cout<<"Please input an int number and a float number:"<<endl;
+    cin>>x>>y;
+    cout<<"The int number is x= "<<x<<endl;
+    cout<<"The float number is y= "<<y<<endl;   
+    return 0;
+}
 ```
-
-```
+运行结果：  
+Please input an int number and a float number:  
+8 7.4↙  
+The int number is x= 8  
+The float number is y= 7.4     
+  
+第 7 行代码连续从标准输入中读取一个整型和一个浮点型数字（默认以空格分隔），分别存入到 x 和 y 中。  
+  
+输入运算符`>>`在读入下一个输入项前会忽略前一项后面的空格，所以数字 8 和 7.4 之间要有一个空格，当 cin 读入 8 后忽略空格，接着读取 7.4。  
+  
+初学者可能会觉得 cout、cin 的用法非常奇怪，它们既不是类似 printf()、scanf() 的函数调用，也不是关键字，请大家先保留这个疑问，我们会在《[C++运算符重载](http://c.biancheng.net/cpp/biancheng/cpp/rumen_10/)》一章中为你揭开谜底。  
+  
+cout、cin 的用法非常强大灵活，本节所展示的只是最基本的功能，更多高级技巧将在后续章节中介绍。在以后的 C++ 编程中，我也推荐大家使用 cin、cout，它们比C语言中的 scanf、printf 更加灵活易用。
 
 
 
