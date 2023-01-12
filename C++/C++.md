@@ -372,7 +372,17 @@ int main(){
     return 0;
 }
 ```
-
+运行结果如下（↙表示按下回车键）：  
+Please input an int number:  
+8↙  
+The int number is x= 8  
+Please input a float number:  
+7.4↙  
+The float number is y= 7.4  
+  
+C++ 中的输入与输出可以看做是一连串的数据流，输入即可视为从文件或键盘中输入程序中的一串数据流，而输出则可以视为从程序中输出一连串的数据流到显示屏或文件中。  
+  
+在编写 C++ 程序时，如果需要使用输入输出时，则需要包含头文件`iostream`，它包含了用于输入输出的对象，例如常见的`cin`表示标准输入、`cout`表示标准输出、`cerr`表示标准错误。
 
 
 
