@@ -357,7 +357,21 @@ int main(){
 在C语言中，我们通常会使用 scanf 和 printf 来对数据进行输入输出操作。在C++语言中，C语言的这一套输入输出库我们仍然能使用，但是 C++ 又增加了一套新的、更容易使用的输入输出库。  
   
 【例1】简单的输入输出代码示例：
-
+```C++
+#include<iostream>
+u[sin](http://c.biancheng.net/ref/sin.html)g namespace std;
+int main(){
+    int x;
+    float y;
+    cout<<"Please input an int number:"<<endl;
+    cin>>x;
+    cout<<"The int number is x= "<<x<<endl;
+    cout<<"Please input a float number:"<<endl;
+    cin>>y;
+    cout<<"The float number is y= "<<y<<endl;   
+    return 0;
+}
+```
 
 
 
