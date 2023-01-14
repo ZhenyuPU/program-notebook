@@ -28,6 +28,412 @@ C++ 编译器用于把源代码编译成最终的可执行程序。
 最常用的免费可用的编译器是 GNU 的 C/C++ 编译器，如果您使用的是 HP 或 Solaris，则可以使用各自操作系统上的编译器。
 
 以下部分将指导您如何在不同的操作系统上安装 GNU 的 C/C++ 编译器。这里同时提到 C/C++，主要是因为 GNU 的 gcc 编译器适合于 C 和 C++ 编程语言。
+# C++ 中的分号 & 语句块
+在 C++ 中，分号是语句结束符。也就是说，每个语句必须以分号结束。它表明一个逻辑实体的结束。
+
+# C++ 标识符
+
+C++ 标识符是用来标识变量、函数、类、模块，或任何其他用户自定义项目的名称。一个标识符以字母 A-Z 或 a-z 或下划线 _ 开始，后跟零个或多个字母、下划线和数字（0-9）。
+
+C++ 标识符内不允许出现标点字符，比如 @、& 和 %。C++ 是区分大小写的编程语言。因此，在 C++ 中，**Manpower** 和 **manpower** 是两个不同的标识符。
+
+# C++ 中的空格
+
+只包含空格的行，被称为空白行，可能带有注释，C++ 编译器会完全忽略它。
+
+# C++ 数据类型
+
+在 C++ 中，空格用于描述空白符、制表符、换行符和注释。
+
+C++ 为程序员提供了种类丰富的内置数据类型和用户自定义的数据类型。下表列出了七种基本的 C++ 数据类型：
+![](Pasted%20image%2020230114165753.png)
+其实 wchar_t 是这样来的：
+`typedef short int wchar_t;`
+所以 wchar_t 实际上的空间是和 short int 一样。
+一些基本类型可以使用一个或多个类型修饰符进行修饰：
+-   signed
+-   unsigned
+-   short
+-   long
+下表显示了各种变量类型在内存中存储值时需要占用的内存，以及该类型的变量所能存储的最大值和最小值。
+
+**注意**：不同系统会有所差异，一字节为 8 位。
+
+**注意**：默认情况下，int、short、long都是带符号的，即 signed。
+
+**注意**：long int 8 个字节，int 都是 4 个字节，早期的 C 编译器定义了 long int 占用 4 个字节，int 占用 2 个字节，新版的 C/C++ 标准兼容了早期的这一设定。
+![](Pasted%20image%2020230114165935.png)
+
+
+## typedef 声明
+
+您可以使用 **typedef** 为一个已有的类型取一个新的名字。下面是使用 typedef 定义一个新类型的语法：
+
+`typedef type newname;`
+
+例如，下面的语句会告诉编译器，feet 是 int 的另一个名称：
+
+`typedef int feet;`
+
+现在，下面的声明是完全合法的，它创建了一个整型变量 distance：
+
+`feet distance;`
+
+## 枚举类型
+
+枚举类型(enumeration)是C++中的一种派生数据类型，它是由用户定义的若干枚举常量的集合。
+
+如果一个变量只有几种可能的值，可以定义为枚举(enumeration)类型。所谓"枚举"是指将变量的值一一列举出来，变量的值只能在列举出来的值的范围内。
+
+创建枚举，需要使用关键字 **enum**。枚举类型的一般形式为：
+```C++
+enum 枚举名{ 
+     标识符[=整型常数], 
+     标识符[=整型常数], 
+... 
+    标识符[=整型常数]
+} 枚举变量;
+    
+```
+
+如果枚举没有初始化, 即省掉"=整型常数"时, 则从第一个标识符开始。
+
+例如，下面的代码定义了一个颜色枚举，变量 c 的类型为 color。最后，c 被赋值为 "blue"。
+
+enum color { red, green, blue } c;
+c = blue;
+
+默认情况下，第一个名称的值为 0，第二个名称的值为 1，第三个名称的值为 2，以此类推。但是，您也可以给名称赋予一个特殊的值，只需要添加一个初始值即可。例如，在下面的枚举中，**green** 的值为 5。
+
+`enum color { red, green=5, blue };`
+
+在这里，**blue** 的值为 6，因为默认情况下，每个名称都会比它前面一个名称大 1，但 red 的值依然为 0。
+
+# C++变量类型
+![](Pasted%20image%2020230114170653.png)
+
+C++ 也允许定义各种其他类型的变量，比如**枚举、指针、数组、引用、数据结构、类**等等，这将会在后续的章节中进行讲解。
+
+由一个或多个标识符名称组成，多个标识符之间用逗号分隔。下面列出几个有效的声明：
+```C++
+extern int d = 3, f = 5; // d 和 f 的声明 
+int d = 3, f = 5; // 定义并初始化 d 和 f 
+byte z = 22; // 定义并初始化 z 
+char x = 'x'; // 变量 x 的值为 'x'
+```
+
+**不带初始化的定义**：带有静态存储持续时间的变量会被隐式初始化为 NULL（所有字节的值都是 0），其他所有变量的初始值是未定义的。
+
+可以使用 **extern** 关键字在任何地方声明一个变量。虽然您可以在 C++ 程序中多次声明一个变量，但变量只能在某个文件、函数或代码块中被定义一次。
+
+```C++
+#include <iostream> 
+using namespace std; 
+// 变量声明 
+extern int a, b; 
+extern int c; 
+extern float f; 
+int main () 
+{ 
+// 变量定义 
+int a, b; int c; float f;
+// 实际初始化 
+a = 10; b = 20; c = a + b; 
+cout << c << endl ; 
+f = 70.0/3.0; 
+cout << f << endl ; 
+return 0; 
+}
+```
+当上面的代码被编译和执行时，它会产生下列结果：
+30
+23.3333
+
+同样的，在函数声明时，提供一个函数名，而函数的实际定义则可以在任何地方进行。例如：
+```C++
+// 函数声明 
+int func(); 
+
+int main() 
+{ 
+// 函数调用 
+int i = func(); 
+}
+// 函数定义 
+int func() 
+{ 
+return 0; 
+}
+```
+
+## C++ 中的左值（Lvalues）和右值（Rvalues）
+
+C++ 中有两种类型的表达式：
+
+-   **左值（lvalue）**：指向内存位置的表达式被称为左值（lvalue）表达式。左值可以出现在赋值号的左边或右边。
+-   **右值（rvalue）**：术语右值（rvalue）指的是存储在内存中某些地址的数值。右值是不能对其进行赋值的表达式，也就是说，右值可以出现在赋值号的右边，但不能出现在赋值号的左边。
+
+变量是左值，因此可以出现在赋值号的左边。数值型的字面值是右值，因此不能被赋值，不能出现在赋值号的左边。下面是一个有效的语句：
+
+`int g = 20;`
+
+但是下面这个就不是一个有效的语句，会生成编译时错误：
+
+`10 = 20;``
+
+
+## C++变量的初始化和定义位置
+
+![](Pasted%20image%2020230114171412.png)
+
+C++不但在C语言的基础上进行了很多扩展，而且也对C语言部分做了细节上的改进，变量的定义位置就是其中之一。  
+  
+C89 规定，所有局部变量都必须定义在函数开头，在定义好变量之前不能有其他的执行语句。C99 标准取消这这条限制，但是 VC/VS 对 C99 的支持很不积极，仍然要求变量定义在函数开头。
+
+C89 和 C99 是两套不同的C语言标准，C99 是 C89 的升级版。
+
+请看下面的代码：
+```c
+#include <stdio.h>
+int main(){
+    int a;
+    scanf("%d", &a);
+    int b;
+    scanf("%d", &b);
+    int c = a + b;
+    printf("%d\n", c);
+
+    return 0;
+}
+```
+将代码保存到源文件`main.c`，那么它可以在 GCC、Xcode 下编译通过，但在 VC/VS 下会报错。GCC、Xcode 对 C99 的支持非常好，可以在函数的任意位置定义变量；但 VC/VS 对 C99 的支持寥寥无几，必须在函数开头定义好所有变量。  
+  
+将上面的代码再保存到源文件`main.cpp`，那么它在 GCC、Xcode、VC/VS 下都可以编译通过。这是因为 C++ 取消了原来的限制，变量只要在使用之前定义好即可，不强制必须在函数开头定义所有变量。
+
+注意源文件的后缀，`.c`是C语言代码，`.cpp`是C++代码，它们的编译方式不同。
+
+取消限制带来的另外一个好处是，可以在 for 循环的控制语句中定义变量，请看下面的例子：
+```C++
+#include <iostream>
+using namespace std;
+int sum(int n){
+    int total = 0;
+    //在for循环的条件语句内部定义变量i
+    for(int i=1; i<=n ;i++){
+    //先i+1再跟n判断，除了初始i=1不用加1
+        total += i;
+    }
+    return total;
+}
+
+int main(){
+    cout<<"Input a interge: ";
+    int n;
+    cin>>n;
+    cout<<"Total: "<<sum(n)<<endl;
+    return 0;
+}
+```
+运行结果：  
+Input a interge: 10  
+Total: 55
+在 for 内部定义循环控制变量 i，会让代码看起来更加紧凑，并使得 i 的作用域被限制在整个 for 循环语句内部（包括循环条件和循环体），减小了命名冲突的概率。
+
+## C++布尔类型（bool）
+在C语言中，关系运算和逻辑运算的结果有两种，真和假：0 表示假，非 0 表示真。例如：
+```C
+#include <stdio.h>
+int main(){
+    int a, b, flag;
+    scanf("%d %d", &a, &b);
+    flag = a > b;  //flag保存关系运算结果
+    printf("flag = %d\n", flag);
+    
+    return 0;
+}
+```
+运行结果：  
+10 20↙  
+flag = 0  
+  
+C语言并没有彻底从语法上支持“真”和“假”，只是用 0 和非 0 来代表。这点在 C++ 中得到了改善，C++ 新增了 **bool 类型（布尔类型）**，它一般占用 1 个字节长度。bool 类型只有两个取值，true 和 false：true 表示“真”，false 表示“假”。  
+  
+bool 是类型名字，也是 C++ 中的关键字，它的用法和 int、char、long 是一样的，请看下面的例子：
+```C++
+#include <iostream>
+using namespace std;
+int main(){
+int a, b;
+bool flag;  //定义布尔变量
+cin>>a>>b;
+flag = a > b;
+cout<<"flag = "<<flag<<endl;
+
+return 0;
+}
+```
+10 20↙  
+flag = 0  
+  
+遗憾的是，在 C++ 中使用 cout 输出 bool 变量的值时还是用数字 1 和 0 表示，而不是 true 或 false。Java、PHP、JavaScript等也都支持布尔类型，但输出结果为 true 或 false。  
+  
+你也可以使用 true 或 false 显式地对 bool 变量赋值，例如：
+```C++
+#include <iostream>
+using namespace std;
+
+int main(){
+    bool flag = true;
+    if(flag){
+        cout<<"true"<<endl;
+    }else{
+        cout<<"false"<<endl;
+    }
+
+    flag = false;
+    if(flag){
+        cout<<"true"<<endl;
+    }else{
+        cout<<"false"<<endl;
+    }
+
+    return 0;
+}
+```
+运行结果：  
+true  
+false
+
+注意，true 和 false 是 C++ 中的关键字，true 表示“真”，false 表示“假”。
+
+在以后的编码中，我推荐使用 bool 变量来表示逻辑运算、关系运算以及开关变量的值。
+
+# C++常量
+整数：
+```c++
+212 // 合法的 
+215u // 合法的
+0xFeeL // 合法的 
+078 // 非法的：8 不是八进制的数字 
+032UU // 非法的：不能重复后缀
+```
+
+
+以下是各种类型的整数常量的实例：
+```c++
+85 // 十进制 
+0213 // 八进制 
+0x4b // 十六进制 
+30 // 整数 
+30u // 无符号整数 
+30l // 长整数 
+30ul // 无符号长整数
+```
+浮点：
+```C++
+3.14159 
+// 合法的 
+314159E-5L 
+// 合法的 
+510E 
+// 非法的：不完整的指数 
+210f // 非法的：没有小数或指数 
+.e55 // 非法的：缺少整数或分数
+```
+
+布尔常量：
+布尔常量共有两个，它们都是标准的 C++ 关键字：
+
+-   **true** 值代表真。
+-   **false** 值代表假。
+
+我们不应把 true 的值看成 1，把 false 的值看成 0。
+
+**字符常量**：
+
+字符常量是括在单引号中。如果常量以 L（仅当大写时）开头，则表示它是一个宽字符常量（例如 L'x'），此时它必须存储在 **wchar_t** 类型的变量中。否则，它就是一个窄字符常量（例如 'x'），此时它可以存储在 **char** 类型的简单变量中。
+
+字符常量可以是一个普通的字符（例如 'x'）、一个转义序列（例如 '\t'），或一个通用的字符（例如 '\u02C0'）。
+
+在 C++ 中，有一些特定的字符，当它们前面有反斜杠时，它们就具有特殊的含义，被用来表示如换行符（\n）或制表符（\t）等。下表列出了一些这样的转义序列码：
+![](Pasted%20image%2020230114171850.png)
+
+**字符型常量**
+
+字符串字面值或常量是括在双引号 "" 中的。一个字符串包含类似于字符常量的字符：普通的字符、转义序列和通用的字符。
+
+您可以使用`\`做分隔符，把一个很长的字符串常量进行分行。
+```C++
+#include <iostream>  
+#include <string>  
+using namespace std;  
+  
+int main() {  
+    string greeting = "hello, runoob";  
+    cout << greeting;  
+    cout << "\n";     // 换行符  
+    string greeting2 = "hello, \  
+                       runoob";  
+    cout << greeting2;  
+    return 0;  
+}
+```
+结果：
+hello, runoob
+hello, runoob
+
+
+## 定义常量
+
+在 C++ 中，有两种简单的定义常量的方式：
+
+-   使用 **#define** 预处理器。
+-   使用 **const** 关键字。
+
+define 预处理器
+
+下面是使用 define 预处理器定义常量的形式：
+`#define identifier value`
+
+```C++
+#include <iostream> 
+using namespace std; 
+#define LENGTH 10 
+#define WIDTH 5 
+#define NEWLINE '\n' 
+int main() { 
+int area; 
+area = LENGTH * WIDTH; 
+cout << area; 
+cout << NEWLINE; 
+return 0; 
+}
+```
+50
+
+
+const 关键字
+
+您可以使用 **const** 前缀声明指定类型的常量，如下所示：
+
+`const type variable = value;`
+
+具体请看下面的实例：
+```C++
+#include <iostream> 
+using namespace std; 
+int main() { 
+const int LENGTH = 10; 
+const int WIDTH = 5; 
+const char NEWLINE = '\n'; 
+int area; 
+area = LENGTH * WIDTH; 
+cout << area; 
+cout << NEWLINE; 
+return 0; 
+}
+```
+
 
 # 类
 class 和 public 都是 C++ 中的关键字，初学者请先忽略 public（后续会深入讲解），把注意力集中在 class 上。  
@@ -453,130 +859,4 @@ The float number is y= 7.4   
 初学者可能会觉得 cout、cin 的用法非常奇怪，它们既不是类似 printf()、scanf() 的函数调用，也不是关键字。  
   
 cout、cin 的用法非常强大灵活，本节所展示的只是最基本的功能，更多高级技巧将在后续章节中介绍。在以后的 C++ 编程中，我也推荐大家使用 cin、cout，它们比C语言中的 scanf、printf 更加灵活易用。
-
-# C++变量的定义位置
-
-C++不但在C语言的基础上进行了很多扩展，而且也对C语言部分做了细节上的改进，变量的定义位置就是其中之一。  
-  
-C89 规定，所有局部变量都必须定义在函数开头，在定义好变量之前不能有其他的执行语句。C99 标准取消这这条限制，但是 VC/VS 对 C99 的支持很不积极，仍然要求变量定义在函数开头。
-
-C89 和 C99 是两套不同的C语言标准，C99 是 C89 的升级版。
-
-请看下面的代码：
-```c
-#include <stdio.h>
-int main(){
-    int a;
-    scanf("%d", &a);
-    int b;
-    scanf("%d", &b);
-    int c = a + b;
-    printf("%d\n", c);
-
-    return 0;
-}
-```
-将代码保存到源文件`main.c`，那么它可以在 GCC、Xcode 下编译通过，但在 VC/VS 下会报错。GCC、Xcode 对 C99 的支持非常好，可以在函数的任意位置定义变量；但 VC/VS 对 C99 的支持寥寥无几，必须在函数开头定义好所有变量。  
-  
-将上面的代码再保存到源文件`main.cpp`，那么它在 GCC、Xcode、VC/VS 下都可以编译通过。这是因为 C++ 取消了原来的限制，变量只要在使用之前定义好即可，不强制必须在函数开头定义所有变量。
-
-注意源文件的后缀，`.c`是C语言代码，`.cpp`是C++代码，它们的编译方式不同。
-
-取消限制带来的另外一个好处是，可以在 for 循环的控制语句中定义变量，请看下面的例子：
-```C++
-#include <iostream>
-using namespace std;
-int sum(int n){
-    int total = 0;
-    //在for循环的条件语句内部定义变量i
-    for(int i=1; i<=n ;i++){
-    //先i+1再跟n判断，除了初始i=1不用加1
-        total += i;
-    }
-    return total;
-}
-
-int main(){
-    cout<<"Input a interge: ";
-    int n;
-    cin>>n;
-    cout<<"Total: "<<sum(n)<<endl;
-    return 0;
-}
-```
-运行结果：  
-Input a interge: 10  
-Total: 55
-在 for 内部定义循环控制变量 i，会让代码看起来更加紧凑，并使得 i 的作用域被限制在整个 for 循环语句内部（包括循环条件和循环体），减小了命名冲突的概率。
-
-# C++布尔类型（bool）
-在C语言中，关系运算和逻辑运算的结果有两种，真和假：0 表示假，非 0 表示真。例如：
-```C
-#include <stdio.h>
-int main(){
-    int a, b, flag;
-    scanf("%d %d", &a, &b);
-    flag = a > b;  //flag保存关系运算结果
-    printf("flag = %d\n", flag);
-    
-    return 0;
-}
-```
-运行结果：  
-10 20↙  
-flag = 0  
-  
-C语言并没有彻底从语法上支持“真”和“假”，只是用 0 和非 0 来代表。这点在 C++ 中得到了改善，C++ 新增了 **bool 类型（布尔类型）**，它一般占用 1 个字节长度。bool 类型只有两个取值，true 和 false：true 表示“真”，false 表示“假”。  
-  
-bool 是类型名字，也是 C++ 中的关键字，它的用法和 int、char、long 是一样的，请看下面的例子：
-```C++
-#include <iostream>
-using namespace std;
-int main(){
-int a, b;
-bool flag;  //定义布尔变量
-cin>>a>>b;
-flag = a > b;
-cout<<"flag = "<<flag<<endl;
-
-return 0;
-}
-```
-10 20↙  
-flag = 0  
-  
-遗憾的是，在 C++ 中使用 cout 输出 bool 变量的值时还是用数字 1 和 0 表示，而不是 true 或 false。Java、PHP、JavaScript等也都支持布尔类型，但输出结果为 true 或 false。  
-  
-你也可以使用 true 或 false 显式地对 bool 变量赋值，例如：
-```C++
-#include <iostream>
-using namespace std;
-
-int main(){
-    bool flag = true;
-    if(flag){
-        cout<<"true"<<endl;
-    }else{
-        cout<<"false"<<endl;
-    }
-
-    flag = false;
-    if(flag){
-        cout<<"true"<<endl;
-    }else{
-        cout<<"false"<<endl;
-    }
-
-    return 0;
-}
-```
-运行结果：  
-true  
-false
-
-注意，true 和 false 是 C++ 中的关键字，true 表示“真”，false 表示“假”。
-
-在以后的编码中，我推荐使用 bool 变量来表示逻辑运算、关系运算以及开关变量的值。
-
-
 

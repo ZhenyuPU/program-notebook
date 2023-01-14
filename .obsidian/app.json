@@ -1,7 +1,7 @@
 {
   "newFileLocation": "current",
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "./",
+  "attachmentFolderPath": "./C++/图库",
   "showFrontmatter": true,
   "spellcheckLanguages": [
     "zh-CN",
