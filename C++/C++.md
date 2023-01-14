@@ -456,7 +456,28 @@ int main(){
 
 注意源文件的后缀，`.c`是C语言代码，`.cpp`是C++代码，它们的编译方式不同。
 
-取消限制带来的另外一个好处是，可以在 [for 循环](http://c.biancheng.net/view/172.html)的控制语句中定义变量，请看下面的例子：
+取消限制带来的另外一个好处是，可以在 for 循环的控制语句中定义变量，请看下面的例子：
+```C++
+#include <iostream>
+using 
+
+int sum(int n){
+    int total = 0;
+    //在[for循环](http://c.biancheng.net/view/172.html)的条件语句内部定义变量i
+    for(int i=1; i<=n ;i++){
+        total += i;
+    }
+    return total;
+}
+
+int main(){
+    cout<<"Input a interge: ";
+    int n;
+    cin>>n;
+    cout<<"Total: "<<sum(n)<<endl;
+    return 0;
+}
+```
 
 
 
