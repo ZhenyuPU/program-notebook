@@ -1,8 +1,34 @@
-输入输出：
-```c++
-cin>>  \\输入
-cout<<  \\输出
-```
+# 面向对象编程
+
+面向对象程序设计（Object Oriented Programming，OOP）是一种计算机编程架构。OOP的一条基本原则是计算机程序由单个能够起到子程序作用的单元或对象组合而成。OOP达到了软件工程的三个主要目标：重用性、灵活性和扩展性。OOP=对象+类+继承+多态+消息，其中核心概念是类和对象。
+
+面向对象程序设计方法是尽可能模拟人类的思维方式，使得软件的开发方法与过程尽可能接近人类认识世界、解决现实问题的方法和过程，也即使得描述问题的问题空间与问题的解决方案空间在结构上尽可能一致，把客观世界中的实体抽象为问题域中的对象。
+
+面向对象程序设计以对象为核心，该方法认为程序由一系列对象组成。类是对现实世界的抽象，包括表示静态属性的数据和对数据的操作，对象是类的实例化。对象间通过消息传递相互通信，来模拟现实世界中不同实体间的联系。在面向对象的程序设计中，对象是组成程序的基本模块。
+
+
+# 文本编辑器
+
+这将用于输入您的程序。文本编辑器包括 Windows Notepad、OS Edit command、Brief、Epsilon、EMACS 和 vim/vi。
+
+文本编辑器的名称和版本在不同的操作系统上可能会有所不同。例如，Notepad 通常用于 Windows 操作系统上，vim/vi 可用于 Windows 和 Linux/UNIX 操作系统上。
+
+通过编辑器创建的文件通常称为源文件，源文件包含程序源代码。C++ 程序的源文件通常使用扩展名 .cpp、.cp 或 .c。
+
+在开始编程之前，请确保您有一个文本编辑器，且有足够的经验来编写一个计算机程序，然后把它保存在一个文件中，编译并执行它。
+
+# C++ 编译器
+
+写在源文件中的源代码是人类可读的源。它需要"编译"，转为机器语言，这样 CPU 可以按给定指令执行程序。
+
+C++ 编译器用于把源代码编译成最终的可执行程序。
+
+大多数的 C++ 编译器并不在乎源文件的扩展名，但是如果您未指定扩展名，则默认使用 .cpp。
+
+最常用的免费可用的编译器是 GNU 的 C/C++ 编译器，如果您使用的是 HP 或 Solaris，则可以使用各自操作系统上的编译器。
+
+以下部分将指导您如何在不同的操作系统上安装 GNU 的 C/C++ 编译器。这里同时提到 C/C++，主要是因为 GNU 的 gcc 编译器适合于 C 和 C++ 编程语言。
+
 # 类
 class 和 public 都是 C++ 中的关键字，初学者请先忽略 public（后续会深入讲解），把注意力集中在 class 上。  
   
@@ -460,11 +486,11 @@ int main(){
 ```C++
 #include <iostream>
 using namespace std;
-
 int sum(int n){
     int total = 0;
     //在for循环的条件语句内部定义变量i
     for(int i=1; i<=n ;i++){
+    //先i+1再跟n判断，除了初始i=1不用加1
         total += i;
     }
     return total;
@@ -478,9 +504,79 @@ int main(){
     return 0;
 }
 ```
+运行结果：  
+Input a interge: 10  
+Total: 55
+在 for 内部定义循环控制变量 i，会让代码看起来更加紧凑，并使得 i 的作用域被限制在整个 for 循环语句内部（包括循环条件和循环体），减小了命名冲突的概率。
 
+# C++布尔类型（bool）
+在C语言中，关系运算和逻辑运算的结果有两种，真和假：0 表示假，非 0 表示真。例如：
+```C
+#include <stdio.h>
+int main(){
+    int a, b, flag;
+    scanf("%d %d", &a, &b);
+    flag = a > b;  //flag保存关系运算结果
+    printf("flag = %d\n", flag);
+    
+    return 0;
+}
+```
+运行结果：  
+10 20↙  
+flag = 0  
+  
+C语言并没有彻底从语法上支持“真”和“假”，只是用 0 和非 0 来代表。这点在 C++ 中得到了改善，C++ 新增了 **bool 类型（布尔类型）**，它一般占用 1 个字节长度。bool 类型只有两个取值，true 和 false：true 表示“真”，false 表示“假”。  
+  
+bool 是类型名字，也是 C++ 中的关键字，它的用法和 int、char、long 是一样的，请看下面的例子：
+```C++
+#include <iostream>
+using namespace std;
+int main(){
+int a, b;
+bool flag;  //定义布尔变量
+cin>>a>>b;
+flag = a > b;
+cout<<"flag = "<<flag<<endl;
 
+return 0;
+}
+```
+10 20↙  
+flag = 0  
+  
+遗憾的是，在 C++ 中使用 cout 输出 bool 变量的值时还是用数字 1 和 0 表示，而不是 true 或 false。Java、PHP、JavaScript等也都支持布尔类型，但输出结果为 true 或 false。  
+  
+你也可以使用 true 或 false 显式地对 bool 变量赋值，例如：
+```C++
+#include <iostream>
+using namespace std;
 
+int main(){
+    bool flag = true;
+    if(flag){
+        cout<<"true"<<endl;
+    }else{
+        cout<<"false"<<endl;
+    }
+
+    flag = false;
+    if(flag){
+        cout<<"true"<<endl;
+    }else{
+        cout<<"false"<<endl;
+    }
+
+    return 0;
+}
+```
+运行结果：  
+true  
+false
+
+注意，true 和 false 是 C++ 中的关键字，true 表示“真”，false 表示“假”。
+
+在以后的编码中，我推荐使用 bool 变量来表示逻辑运算、关系运算以及开关变量的值。
 
 
 

@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#文本编辑器",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,7 +66,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -148,7 +149,7 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "e61009b433fa4754",
+  "active": "a7052aa86f8ad201",
   "lastOpenFiles": [
     "SQL/SQL.md",
     "MATLAB.md",
