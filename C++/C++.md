@@ -459,11 +459,11 @@ int main(){
 取消限制带来的另外一个好处是，可以在 for 循环的控制语句中定义变量，请看下面的例子：
 ```C++
 #include <iostream>
-using 
+using namespace std;
 
 int sum(int n){
     int total = 0;
-    //在[for循环](http://c.biancheng.net/view/172.html)的条件语句内部定义变量i
+    //在for循环的条件语句内部定义变量i
     for(int i=1; i<=n ;i++){
         total += i;
     }
