@@ -63,5 +63,16 @@ L’identifiant est précisé en soulignant les propriétés qui le composent.
 Par défaut, l’identifiant d’une association est constitué de l’ensemble des identifiants des entités liées.
 ![](Pasted%20image%2020230119212430.png)
 
+Résoudre les associations mal définies
+Si votre association pose un problème :
+![](Pasted%20image%2020230119213558.png)
+On transforme l’association en une entité.
+De nouvelles associations sont créées avec la nouvelle entité.
+Par défaut les cardinalités sont de type 1:1.
+![](Pasted%20image%2020230119213620.png)
+Il est alors possible de changer les cardinalités comme on le souhaite.
+![](Pasted%20image%2020230119213653.png)
+
+
 
 
