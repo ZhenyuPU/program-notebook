@@ -60,5 +60,8 @@ Exploitation : Produit-Commande
 Identifiants标识符/用户名
 Toute entité DOIT comporter un identifiant，确保唯一性
 L’identifiant est précisé en soulignant les propriétés qui le composent.
+Par défaut, l’identifiant d’une association est constitué de l’ensemble des identifiants des entités liées.
+![](Pasted%20image%2020230119212430.png)
+
 
 
