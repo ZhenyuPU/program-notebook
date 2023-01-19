@@ -52,5 +52,13 @@ au maximum ?
 ·L’entité ne peut pas apparaître plusieurs fois dans l’association=>max = 1
 例子：
 Exploitation : Produit-Commande
-Un Produit peut exister sans avoir été commandé => min = 0
-Un Produit peut figurer sur plusieurs commandes => max = n
+**Un Produit** peut exister sans avoir été commandé => min = 0
+**Un Produit** peut figurer sur plusieurs commandes => max = n
+这里的entite是单数，只能是单数，你在分析数量关系时从单数考虑。
+**一个**xxx在association中存在xx次。
+
+Identifiants标识符/用户名
+Toute entité DOIT comporter un identifiant，确保唯一性
+L’identifiant est précisé en soulignant les propriétés qui le composent.
+
+
