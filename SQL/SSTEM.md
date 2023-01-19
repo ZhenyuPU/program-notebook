@@ -30,3 +30,27 @@ nom_association = <entitée_1, …, entité_n >
 
 随时间改变：
 ![](Pasted%20image%2020230119204516.png)
+Types d’association
+Symétrique / Cyclique
+![](Pasted%20image%2020230119205336.png)
+Hiérarchique / Transitive
+![](Pasted%20image%2020230119205344.png)
+
+Préciser sur le lien entre l’entité et l’association :
+·Le nombre de connexions minimum : 0 ou 1
+·Le nombre de connexions maximum : 1 ou n
+au minimum ?
+·0 = peut ne pas apparaître
+·1 = doit apparaître
+au maximum ?
+·1 = ne peut pas apparaître plus d’une fois
+·n = peut apparaître plusieurs fois
+考虑entite出现：
+·L’entité peut exister sans apparaître dans l’association=>min = 0
+·L’entité doit apparaître dans l’association=>min = 1
+·L’entité peut apparaître plusieurs fois dans l’association=>max = n
+·L’entité ne peut pas apparaître plusieurs fois dans l’association=>max = 1
+例子：
+Exploitation : Produit-Commande
+Un Produit peut exister sans avoir été commandé => min = 0
+Un Produit peut figurer sur plusieurs commandes => max = n
