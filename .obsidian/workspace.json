@@ -19,8 +19,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "73e63298d78197f6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SQL/SSTEM.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SQL/SQL.md",
+                "file": "SQL/SSTEM.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SQL/SQL.md",
+                "file": "SQL/SSTEM.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SQL/SQL.md"
+                "file": "SQL/SSTEM.md"
               }
             }
           }
@@ -148,11 +162,11 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "83fea52a5ac10d9a",
+  "active": "73e63298d78197f6",
   "lastOpenFiles": [
+    "SQL/SQL.md",
     "C++/C++/C++.md",
     "C++/C++/图库/Pasted image 20230114191502.png",
-    "SQL/SQL.md",
     "MATLAB.md",
     "Latex.md",
     "Python.md",
