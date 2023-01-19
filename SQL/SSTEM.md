@@ -74,5 +74,12 @@ Il est alors possible de changer les cardinalités comme on le souhaite.
 ![](Pasted%20image%2020230119213653.png)
 
 
+Un attribut a une valeur simple. Il ne peut pas être composé de plusieurs éléments.
+属性只能是单数![](Pasted%20image%2020230119214933.png)
+不能包含一串值：
+![](Pasted%20image%2020230119215018.png)
 
+NULL 是一个缺省值，无类型，不拥有任何值。
+
+Attention, l’identifiant ne peut pas comporter de valeur NULL
 
