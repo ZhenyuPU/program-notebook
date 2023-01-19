@@ -1,4 +1,5 @@
-# 物理模型建立
+# 概念模型建立
+## Qccurrence et Population
 情况：
 Occurrence d’une propriété = couple ( propriété, sa valeur )
 Occurrence d’une entité = couple ( entité, occurrences des propriétés )
@@ -13,7 +14,7 @@ Propriété_2
 ...
 Propriété_n
 ```
-Association:
+## Association
 Exemples :
 ·A-Ecrit entre les entités Ecrivain et Livre
 ·Edite entre les entités Editeur et Livre
@@ -35,7 +36,7 @@ Symétrique / Cyclique
 ![](Pasted%20image%2020230119205336.png)
 Hiérarchique / Transitive
 ![](Pasted%20image%2020230119205344.png)
-
+## 基数问题
 Préciser sur le lien entre l’entité et l’association :
 ·Le nombre de connexions minimum : 0 ou 1
 ·Le nombre de connexions maximum : 1 ou n
@@ -57,12 +58,12 @@ Exploitation : Produit-Commande
 这里的entite是单数，只能是单数，你在分析数量关系时从单数考虑。
 **一个**xxx在association中存在xx次。
 
-Identifiants标识符/用户名
+## Identifiants标识符/用户名
 Toute entité DOIT comporter un identifiant，确保唯一性
 L’identifiant est précisé en soulignant les propriétés qui le composent.
 Par défaut, l’identifiant d’une association est constitué de l’ensemble des identifiants des entités liées.
 ![](Pasted%20image%2020230119212430.png)
-
+## 改association为entite
 Résoudre les associations mal définies
 Si votre association pose un problème :
 ![](Pasted%20image%2020230119213558.png)
@@ -82,4 +83,15 @@ Un attribut a une valeur simple. Il ne peut pas être composé de plusieurs él�
 NULL 是一个缺省值，无类型，不拥有任何值。
 
 Attention, l’identifiant ne peut pas comporter de valeur NULL
+
+# 物理模型的建立
+Mise en Ouvre du Modèle Physique
+建立物理模型过程：
+1.先按照原概念模型写出各个实体；
+2.对于其中**一个基数**（可以有一个基数最大不为1）最大为1的二元 binaire association，我们要对连接的entite进行补充属性，让补充的指向原来的；
+3.对于非二元或最大为n的association，我们把这些association改为entite，然后根据连接的entite增加属性，并指向这些原来的属性。
+4.数据物理模型的建立(mise en ouvre du modèle physique des données)
+增加属性的数据类型
+**Remarque**:每一个关系表格需要有标识符，并且数据类型也要划线。
+![](Pasted%20image%2020230119225019.png)
 
