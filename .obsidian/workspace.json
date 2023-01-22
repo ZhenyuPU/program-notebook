@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SQL/SSTEM.md",
+                "file": "SQL/SQL.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#defin",
+                "query": "create",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -80,7 +80,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -100,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SQL/SSTEM.md",
+                "file": "SQL/SQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SQL/SSTEM.md",
+                "file": "SQL/SQL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SQL/SSTEM.md"
+                "file": "SQL/SQL.md"
               }
             }
           }
@@ -162,8 +163,9 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "73e63298d78197f6",
+  "active": "a7052aa86f8ad201",
   "lastOpenFiles": [
+    "SQL/SSTEM.md",
     "SQL/SQL.md",
     "C++/C++/C++.md",
     "C++/C++/图库/Pasted image 20230114191502.png",
