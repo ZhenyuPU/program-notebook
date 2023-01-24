@@ -446,7 +446,7 @@ ROLLBACK;
 ```
 
 
-## Langage de Définition de Données
+## Définition de Données
 ### Commandes sur les bases de données
 
 ·CREATE DATABASE : créer une base
