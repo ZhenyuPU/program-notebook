@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SQL/SQL.md",
+                "file": "SQL/SSTEM.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SQL/SQL.md",
+                "file": "SQL/SSTEM.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SQL/SQL.md",
+                "file": "SQL/SSTEM.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SQL/SQL.md"
+                "file": "SQL/SSTEM.md"
               }
             }
           }
@@ -161,10 +161,10 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "e61009b433fa4754",
+  "active": "83fea52a5ac10d9a",
   "lastOpenFiles": [
-    "Latex.md",
     "SQL/SQL.md",
+    "Latex.md",
     "SQL/SSTEM.md",
     "C++/C++/C++.md",
     "C++/C++/图库/Pasted image 20230114191502.png",
