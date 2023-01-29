@@ -891,7 +891,7 @@ Fig. \ref{fig01}
 (4)插入单排多图无小标题共享大标题
 ```latex
 \begin{figure}[htbp]%%图,[htbp]是浮动格式
-\subfigure[]{
+\subfigure[小标题]{
 \includegraphics[width=2.5cm,height=2.5cm]{figures//hx2.png} \label{Fig.6(b)}
 }
 \hspace{2mm}
