@@ -191,7 +191,7 @@ LaTeX数学公式支持
 
 显示：%home\_name\%=honor
 
-11.可选参数[htbp]
+### 11.可选参数[htbp]
 
 LaTeX插入图片、表格等元素时，第一行后面有一个可选参数 `[htbp]`，例如，`\begin{figure}[htbp]`。
 
