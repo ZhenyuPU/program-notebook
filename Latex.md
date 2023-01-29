@@ -141,11 +141,11 @@ Overleaf等工具中可以使用快捷键 `Ctrl+/`
 
 `''English''`
 
-要想正确输入英文引号，把左侧的引号用 ` 代替即可，如下：
+要想正确输入英文引号，把左侧的引号用```  `  ```代替即可，如下：
 
-``English'`
+``` `English'```
 
-```English''`
+```   ``English'' ```
 
 ### 6.空格
 
@@ -207,6 +207,7 @@ p(page): 浮动页；将图形放置在一只允许有浮动对象的页面上�
 - 如果在图形环境中没有给出上述任一参数，则缺省为 `[tbp]`。
 - 给出参数的顺序不会影响到最后的结果。因为在考虑这些参数时LaTeX总是尝试以 `h-t-b-p` 的顺序来确定图形的位置。所以 `[hb]` 和 `[bh]` 都以 `h-b` 的顺序来排版。
 - 给出的参数越多，LaTeX的排版结果就会越好。`[htbp], [tbp], [htp], [tp]` 这些组合得到的效果不错，`[h]`也是常用的选择。
+
 
 ## 五、文章架构
 
@@ -850,6 +851,110 @@ Eq. \eqref{eq1}
 
 ```latex
 Fig. \ref{fig01}
+```
+
+(1) 插入图片的位置
+默认方式：
+是跟.tex文件具有相同路径，所以直接写图片名称即可。
+\includegraphics[width=1\linewidth]{graph_rela.png}
+
+当前子文件夹下的图片
+是相对路径,写：文件夹名+图片名
+\includegraphics[width=1\linewidth]{figures//graph_rela.png}
+
+其他文件夹的图片
+可以采用绝对路径。
+\includegraphics{D:/matlab/image/zs.eps}
+
+
+(2)图片的导入部分
+```latex
+\usepackage{subfigure}
+\usepackage[graphicx]{realboxes}
+```
+
+(3)插入单张图片
+```latex
+\begin{figure}
+\centering %表示居中
+\includegraphics[height=4.5cm,width=9.5cm]{111.eps}
+% [height=4.5cm]表示高度
+%[width=9.5cm]表示宽度
+%{111.eps}表示eps格式的图片，名为111
+\caption{pic1}
+%图片的名称
+\label{2}
+%图片的标签，用于文章中的引用，注意到标签的数字与实际文章显示的数字可能不同
+\end{figure}
+```
+
+(4)插入单排多图无小标题共享大标题
+```latex
+\begin{figure}[htbp]%%图,[htbp]是浮动格式
+\subfigure[]{
+\includegraphics[width=2.5cm,height=2.5cm]{figures//hx2.png} \label{Fig.6(b)}
+}
+\hspace{2mm}
+\subfigure[]{
+\includegraphics[width=2.5cm,height=2.5cm]{figures//hx2.png} \label{Fig.6(b)}
+}	
+\hspace{2mm}
+\subfigure[]{
+\includegraphics[width=2.5cm,height=2.5cm]{figures//hx2.png} \label{Fig.6(b)}
+}
+\caption{Geographical location and relationship of four types of bike stations }
+\end {figure}
+```
+
+注意：不要有回车enter，否则图片会自动跳到下一行
+
+(5)插入单排多图有小标题大标题
+```latex
+\begin{figure}[htbp]%%图,[htbp]是浮动格式
+
+\begin{minipage}[t]{0.3\linewidth}  \label{Fig.4}      %图片占用一行宽度的30%
+		\hspace{2mm}
+		\includegraphics[width=3.5cm,height=2cm]{figures//singlegraph.png}
+		\caption{The relationship between different types of sites.}
+\end{minipage}
+\begin{minipage}[t]{0.3\linewidth}  \label{Fig.4}      %图片占用一行宽度的30%
+	\hspace{2mm}
+	\includegraphics[width=3.5cm,height=2cm]{figures//singlegraph.png}
+	\caption{The relationship between different types of sites.}
+\end{minipage}
+\begin{minipage}[t]{0.3\linewidth}  \label{Fig.4}      %图片占用一行宽度的30%
+		\hspace{2mm}
+		\includegraphics[width=3.5cm,height=2cm]{figures//singlegraph.png}
+		\caption{The relationship between different types of sites.}
+\end{minipage}
+\end {figure}
+
+```
+
+
+(6)图片的间距
+```latex
+\vspace{-0.2cm} %调整图片与上文的垂直距离 
+\setlength{\abovecaptionskip}{-0.2cm}  %调整图片标题与图距离 
+\setlength{\belowcaptionskip}{-0.2cm} %调整图片标题与下文距离
+```
+
+源代码
+```latex
+\begin{figure}[hbp]%%图,[htbp]是浮动格式
+   	 	\vspace{-0.2cm} %调整图片与上文的垂直距离
+    	\setlength{\abovecaptionskip}{-0.8cm}   %调整图片标题与图距离
+    	\setlength{\belowcaptionskip}{-0.2cm} %调整图片标题与下文距离
+\begin{minipage}{0.45\linewidth}%%%%%%%%node1
+	\includegraphics[width=5.5cm,height=3.5cm]{MDPchain.png}
+	\label{Fig.2}
+	\caption{MDP chain}
+\end{minipage}%%%%%%%%%%node2
+\begin{minipage}{0.45\linewidth}
+	\includegraphics[width=5.5cm,height=3.5cm]{userchoose.png}
+	\caption{Detour rule}
+\label{Fig.3}
+\end{minipage}
 ```
 
 #### 3.表格引用
