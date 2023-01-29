@@ -888,7 +888,7 @@ Fig. \ref{fig01}
 \end{figure}
 ```
 
-(4)插入单排多图无小标题共享大标题
+(4)插入单排多图无小标题figure共享大标题
 ```latex
 \begin{figure}[htbp]%%图,[htbp]是浮动格式
 \subfigure[小标题]{
@@ -908,7 +908,7 @@ Fig. \ref{fig01}
 
 注意：不要有回车enter，否则图片会自动跳到下一行
 
-(5)插入单排多图有小标题大标题
+(5)插入单排多图有小标题figure大标题
 ```latex
 \begin{figure}[htbp]%%图,[htbp]是浮动格式
 
@@ -928,7 +928,6 @@ Fig. \ref{fig01}
 		\caption{The relationship between different types of sites.}
 \end{minipage}
 \end {figure}
-
 ```
 
 
