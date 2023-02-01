@@ -776,6 +776,22 @@ setw() 函数用于设置字段的宽度；
 `#include<iomanip>`
 当后面紧跟着的输出字段长度小于 n 的时候，在该字段前面用空格补齐，当输出字段长度大于 n 时，全部整体输出。
 
+
+构造打印函数
+```C++
+void out_vector(vector<string> &vec)//构造函数打印数组，方便验证
+{
+  for(vector<string>::iterator it=vec.begin();it<vec.end();it++){
+     cout<<*it<<" ";
+     cout<<endl;
+   }
+}
+```
+
+
+
+
+
 # 指针
 
 
