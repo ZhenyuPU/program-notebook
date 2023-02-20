@@ -27,15 +27,15 @@ Une association représente un lien non orienté entre plusieurs entités
 一次联系的出现对应每个连接在他上面的实体的出现。
 如果联系有属性，跟时间有关，那么他将随着每次实体出现而改变。
 nom_association = <entitée_1, …, entité_n >
-![](Pasted%20image%2020230119204459.png)
+![](C++/图库/图库/Pasted%20image%2020230119204459.png)
 
 随时间改变：
-![](Pasted%20image%2020230119204516.png)
+![](C++/图库/图库/Pasted%20image%2020230119204516.png)
 Types d’association
 Symétrique / Cyclique
-![](Pasted%20image%2020230119205336.png)
+![](C++/图库/图库/Pasted%20image%2020230119205336.png)
 Hiérarchique / Transitive
-![](Pasted%20image%2020230119205344.png)
+![](C++/图库/图库/Pasted%20image%2020230119205344.png)
 ## 基数问题
 Préciser sur le lien entre l’entité et l’association :
 ·Le nombre de connexions minimum : 0 ou 1
@@ -62,23 +62,23 @@ Exploitation : Produit-Commande
 Toute entité DOIT comporter un identifiant，确保唯一性
 L’identifiant est précisé en soulignant les propriétés qui le composent.
 Par défaut, l’identifiant d’une association est constitué de l’ensemble des identifiants des entités liées.
-![](Pasted%20image%2020230119212430.png)
+![](C++/图库/图库/Pasted%20image%2020230119212430.png)
 ## 改association为entite
 Résoudre les associations mal définies
 Si votre association pose un problème :
-![](Pasted%20image%2020230119213558.png)
+![](C++/图库/图库/Pasted%20image%2020230119213558.png)
 On transforme l’association en une entité.
 De nouvelles associations sont créées avec la nouvelle entité.
 Par défaut les cardinalités sont de type 1:1.
-![](Pasted%20image%2020230119213620.png)
+![](C++/图库/图库/Pasted%20image%2020230119213620.png)
 Il est alors possible de changer les cardinalités comme on le souhaite.
-![](Pasted%20image%2020230119213653.png)
+![](C++/图库/图库/Pasted%20image%2020230119213653.png)
 
 
 Un attribut a une valeur simple. Il ne peut pas être composé de plusieurs éléments.
-属性只能是单数![](Pasted%20image%2020230119214933.png)
+属性只能是单数![](C++/图库/图库/Pasted%20image%2020230119214933.png)
 不能包含一串值：
-![](Pasted%20image%2020230119215018.png)
+![](C++/图库/图库/Pasted%20image%2020230119215018.png)
 
 NULL 是一个缺省值，无类型，不拥有任何值。
 
@@ -93,5 +93,5 @@ Mise en Ouvre du Modèle Physique
 4.数据物理模型的建立(mise en ouvre du modèle physique des données)
 增加属性的数据类型
 **Remarque**:每一个关系表格需要有标识符，并且数据类型也要划线。
-![](Pasted%20image%2020230119225019.png)
+![](C++/图库/图库/Pasted%20image%2020230119225019.png)
 

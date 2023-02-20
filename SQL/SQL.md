@@ -6,7 +6,7 @@ select*from 表名
 //查询表中指定字段：
 select 字段1，字段2 from 表名
 ```
-![[引用照片库/Pasted image 20230102180625.png]]
+![[SQL/图库/引用照片库/Pasted image 20230102180625.png]]
 
 ## distinct去重复值
 ```sql
@@ -59,7 +59,7 @@ name
 ### ILIKE：
 Attention:ILIKE n’est pas disponible sur tous les SBGD.
 ILIKE fonctionne comme LIKE, mais il ne tient pas compte de la casse.不区分大小写！
-![[引用照片库/Pasted image 20230102181545.png]]
+![[SQL/图库/引用照片库/Pasted image 20230102181545.png]]
 ### in:
 是在where中指定多个搜索条件可以匹配的值，实际上是多个or条件的合并
 `select 字符名 from 表名 where 字段 in (值1,值2...)`
@@ -116,26 +116,26 @@ Condition de jointure implicite :
 Si une colonne de la table a le même nom qu’une aure colonne(dans les tables précédentes), on vérifie l’égalité de cette colonne avec les colonnes correspondantes.
 
 Si aucune colonne ne porte le même nom qu’une colonne de la table, on applique un produit cartésien.
-![[引用照片库/Pasted image 20230102184317.png]]
+![[SQL/图库/引用照片库/Pasted image 20230102184317.png]]
 ```sql
 SELECT * FROM Eleve NATURAL JOIN Membre WHERE Eleve_Moy >=10
 ```
 result:
-![[引用照片库/Pasted image 20230102184331.png]]
+![[SQL/图库/引用照片库/Pasted image 20230102184331.png]]
 Pour la situation, il n'y a pas de resultat.
-![[引用照片库/Pasted image 20230102184429.png]]
+![[SQL/图库/引用照片库/Pasted image 20230102184429.png]]
 
 #### OUTER JOIN / NATURAL FULL JOIN
 `SELECT * FROM Eleve NATURAL LEFT OUTER JOIN Membre`
 
 Attention:
-![[引用照片库/Pasted image 20230102184739.png]]
+![[SQL/图库/引用照片库/Pasted image 20230102184739.png]]
 
-![[引用照片库/Pasted image 20230102185029.png]]
+![[SQL/图库/引用照片库/Pasted image 20230102185029.png]]
 这样显然不行，我们必须将 eleve表格中responsable和tresorier分开，这时，就把这张表两种人分别命名为新的表格。
-![[引用照片库/Pasted image 20230102185042.png]]
+![[SQL/图库/引用照片库/Pasted image 20230102185042.png]]
 
-![[引用照片库/Pasted image 20230102185052.png]]
+![[SQL/图库/引用照片库/Pasted image 20230102185052.png]]
 
 ### Simplification de l’écriture des jointures
 
@@ -248,12 +248,12 @@ WHERE conditions
 GROUP BY critère
 ```
 例子：
-![[引用照片库/Pasted image 20230103140116.png]]
+![[SQL/图库/引用照片库/Pasted image 20230103140116.png]]
 ```sql
 SELECT Groupe, AVG(Moy) FROM Eleve GROUP BY Groupe
 ```
 Résultat:
-![[引用照片库/Pasted image 20230103140149.png]]
+![[SQL/图库/引用照片库/Pasted image 20230103140149.png]]
 #### Agrégation:
 Le critère d’agrégation est défini par GROUP BY:
 ```sql
@@ -267,7 +267,7 @@ Remarques:
 ·Le regroupement est fait pour chaque groupe distinct de valeurs des colonnes du GROUP BY. 对分组后单独的值也要分组
 
 
-![[引用照片库/Pasted image 20230103140820.png]]
+![[SQL/图库/引用照片库/Pasted image 20230103140820.png]]
 ```sql
 SELECT Groupe, Statut, AVG(Moy)
 
@@ -288,7 +288,7 @@ select deptno, avg(salary) from employees group by deptno having avg(salary)<450
 ## Les DATE, TIME et TIMESTAMP
 Les donnees sous forme de date et heure sont representes suivant la norme ISO 8601. Ils sont entre apostrophes sans pour autant être des chaines de caractères.
 
-![[引用照片库/Pasted image 20230102181829.png]]
+![[SQL/图库/引用照片库/Pasted image 20230102181829.png]]
 
 Opérateurs de comparaison classiques ( =, …)
 
@@ -337,7 +337,7 @@ WHERE conditions
 ORDER BY critère
 ```
 例子：
-![[引用照片库/Pasted image 20230103142218.png]]
+![[SQL/图库/引用照片库/Pasted image 20230103142218.png]]
 ```sql
 SELECT Eleve_Moy, Eleve_Statut
 
@@ -346,7 +346,7 @@ FROM Eleve
 ORDER BY Eleve_Statut, Eleve_Moy DESC
 -- statut也会按照降序排列
 ```
-![[引用照片库/Pasted image 20230103142242.png]]
+![[SQL/图库/引用照片库/Pasted image 20230103142242.png]]
 
 ## Fonctions utilisables dans les requêtes
 
@@ -387,12 +387,12 @@ INSERT INTO table(attrib1, attrib2, … attribn) VALUES
 
 (valm1, valm2, … valmn)
 ```
-![[引用照片库/Pasted image 20230103145101.png]]
+![[SQL/图库/引用照片库/Pasted image 20230103145101.png]]
 
 在指定的列插入数据:
 我们也可以在指定的列插入数据。
 下面的 SQL 语句将插入一个新行，但是只在 "name"、"url" 和 "country" 列插入数据（id 字段会自动更新）：
-![[引用照片库/Pasted image 20230103145119.png]]
+![[SQL/图库/引用照片库/Pasted image 20230103145119.png]]
 
 
 variante:
@@ -411,8 +411,8 @@ where子句指定哪些记录需要更新，省略的话所有记录更新
 --前面不能加select
 update employees set depno=2, manager=4 where empno=4;
 ```
-![[引用照片库/Pasted image 20230103150040.png]]
-![[引用照片库/Pasted image 20230103150900.png]]
+![[SQL/图库/引用照片库/Pasted image 20230103150040.png]]
+![[SQL/图库/引用照片库/Pasted image 20230103150900.png]]
 
 ### delete删除记录
 `delete from 表名 where子句`
@@ -421,8 +421,8 @@ update employees set depno=2, manager=4 where empno=4;
 --前面不能加select
 delete from employees where empno=4;
 ```
-![[引用照片库/Pasted image 20230103151555.png]]
-![[引用照片库/Pasted image 20230103151540.png]]
+![[SQL/图库/引用照片库/Pasted image 20230103151555.png]]
+![[SQL/图库/引用照片库/Pasted image 20230103151540.png]]
 ## Transaction
 Chaque bloc de requête ne peut fonctionner que de manière **indivisible**. 
 Solution : Faire en sorte que (确保)chaque bloc de requête fonctionne comme s’il était seul.
@@ -482,7 +482,7 @@ contraintes sur la table
 ```
 
 ### Les types des données
-![[引用照片库/Pasted image 20230103225606.png]]
+![[SQL/图库/引用照片库/Pasted image 20230103225606.png]]
 
 ### Les contraintes sur une colonne
 
@@ -570,10 +570,10 @@ Attention aux clés étrangères encore valide
 La syntaxe peut légèrement varier en fonction des systèmes de gestion de bases de données.
 
 
-![](引用照片库/Pasted%20image%2020230104111626.png)
+![](SQL/图库/引用照片库/Pasted%20image%2020230104111626.png)
 Lorsque la cible d’une clé étrangère reçoit l’evenement concerné, on applique le comportement désigné sur la source de la clé étrangère.
 由于表中某些colonne被引用，所以我们需要利用triggered来使得一张表的某些数据发生修改时，外部链接也会更改。
-![](引用照片库/Pasted%20image%2020230104111845.png)
+![](SQL/图库/引用照片库/Pasted%20image%2020230104111845.png)
 ```sql
 CREATE TABLE Personne (
 
@@ -597,7 +597,7 @@ ON DELETE SET NULL
 
 );
 ```
-![](引用照片库/Pasted%20image%2020230104111916.png)
+![](SQL/图库/引用照片库/Pasted%20image%2020230104111916.png)
 
 ## index索引
 提高访问数据速度
@@ -609,7 +609,7 @@ create index in_name on employees(name);
 ```
 
 ## SEQUENCE
-![](引用照片库/Pasted%20image%2020230104164523.png)
+![](SQL/图库/引用照片库/Pasted%20image%2020230104164523.png)
 PostgreSQL具有数据类型smallserial，serial和bigserial; 这些不是真正的类型，而只是在创建唯一标识符列的标志以方便使用。 这些类似于一些其他数据库支持的AUTO_INCREMENT属性。
 
 如果您希望某列具有唯一的约束或是主键，则必须使用其他数据类型进行指定。
