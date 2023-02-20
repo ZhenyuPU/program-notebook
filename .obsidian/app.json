@@ -1,11 +1,13 @@
 {
   "newFileLocation": "current",
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "C++/C++/图库",
+  "attachmentFolderPath": "./图库",
   "showFrontmatter": true,
   "spellcheckLanguages": [
     "zh-CN",
     "en-US",
     "fr-FR"
-  ]
+  ],
+  "newLinkFormat": "absolute",
+  "alwaysUpdateLinks": true
 }

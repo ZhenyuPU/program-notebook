@@ -4,29 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "a91cea1c72dbffdf",
+        "id": "9098c3dfc4e51ff8",
         "type": "tabs",
         "children": [
           {
-            "id": "83fea52a5ac10d9a",
+            "id": "a4149080cfda9e0f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SQL/SQL.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "73e63298d78197f6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SQL/SQL.md",
+                "file": "SQL/未命名.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -99,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SQL/SQL.md",
+                "file": "SQL/未命名.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SQL/SQL.md",
+                "file": "SQL/未命名.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SQL/SQL.md"
+                "file": "SQL/未命名.md"
               }
             }
           }
@@ -161,15 +148,17 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "83fea52a5ac10d9a",
+  "active": "a4149080cfda9e0f",
   "lastOpenFiles": [
-    "C++/C++/C++.md",
-    "Latex.md",
+    "SQL/图库/Pasted image 20230220010058.png",
+    "SQL/图库/Pasted image 20230220010018.png",
+    "SQL/未命名.md",
     "SQL/SSTEM.md",
     "SQL/SQL.md",
-    "C++/C++/图库/Pasted image 20230114191502.png",
-    "MATLAB.md",
-    "Python.md",
-    "Pasted image 20230102120939.png.md"
+    "C++/C++/C++.md",
+    "C++/C++/图库/Pasted image 20230220005931.png",
+    "C++/C++/图库/1676850228826.png",
+    "C++/C++/图库/Pasted image 20230114170653.png",
+    "C++/C++/Pasted image 20230220005802.png"
   ]
 }
