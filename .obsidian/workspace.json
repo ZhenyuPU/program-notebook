@@ -11,8 +11,13 @@
             "id": "0c7e6a2a48056a74",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "SQL/未命名.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -81,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C++/图库/Pasted image 20230114165935.png",
+                "file": "SQL/未命名.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "C++/图库/Pasted image 20230114165935.png",
+                "file": "SQL/未命名.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C++/图库/Pasted image 20230114165935.png"
+                "file": "SQL/未命名.md"
               }
             }
           }
@@ -144,17 +149,17 @@
       "oz-clear-unused-images:Clear Unused Images": false
     }
   },
-  "active": "e61009b433fa4754",
+  "active": "0c7e6a2a48056a74",
   "lastOpenFiles": [
+    "SQL/SQL.md",
+    "SQL/未命名.md",
+    "C++/图库/Pasted image 20230114165935.png",
     "C++/C++.md",
     "C++/图库/图库/Pasted image 20230114171850.png",
     "C++/图库/图库/Pasted image 20230114171412.png",
     "Python/Python.md",
     "MATLAB/MATLAB.md",
-    "SQL/未命名.md",
     "Latex/Latex.md",
-    "SQL/SQL.md",
-    "SQL/图库/引用照片库/Pasted image 20230102180625.png",
-    "SQL/图库/Pasted image 20230220010408.png"
+    "SQL/图库/引用照片库/Pasted image 20230102180625.png"
   ]
 }
