@@ -9,3 +9,9 @@ class Node:
 
     def __str__(self):
         return str(self.item)
+    
+class DoubleNode:
+    def __init__(self, item):
+        self.item = item
+        self.next = None
+        self.prev = None

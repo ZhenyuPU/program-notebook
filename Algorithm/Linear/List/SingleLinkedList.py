@@ -8,7 +8,7 @@ Search
 Print
 It is impossible that node.next.item because node.next is not attribute Node
 '''
-from Linear import Node
+from Module import Node
 
 class SingleLinkedList:
     def __init__(self, limit):
